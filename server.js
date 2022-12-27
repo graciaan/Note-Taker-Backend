@@ -8,7 +8,7 @@ const app = require('./routes/htmlRoute')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/api', api);
+app.use('/api/notes', api);
 
 app.use(express.static('public'));
 
