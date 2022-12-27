@@ -3,15 +3,14 @@ const path = require('path');
 
 const PORT = process.env.port || 3001;
 
-const app = require('./routes/htmlRoute.js')
+const api = require('./routes/apiRoute')
+const app = require('./routes/htmlRoute')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use('/api', api);
+
 app.use(express.static('public'));
-
-
-
-
 
 
 app.listen(PORT, () =>
