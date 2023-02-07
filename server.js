@@ -1,30 +1,30 @@
 const express = require('express');
-const PORT = process.env.port || 3002;
-// const api = require('./routes/apiRoute.js')
+const PORT = process.env.port || 3001;
 const app = express();
 const path = require("path");
 const fs = require('fs');
 const uuid = require('./helpers/uuid')
-
+const notes = require('./db/db.json');
+let parsedNotes = notes
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use('/api/notes', app);
-
 app.use(express.static('public'));
 
+
 app.get('/', (req, res) => 
-  res.sendFile(path.join(__dirname, './public/index.html'))
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-app.get('/notes', (req, res) => 
-  res.sendFile(path.join(__dirname, './public/notes.html'))
-);
+app.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/notes.html'));
+  console.info(`${req.method} request received to get notes`);
+});
+
 
 
 app.get('/api/notes', (req, res) => {
-  res.status(200).json(`${req.method} request received to get notes`);
-  console.info(`${req.method} request received to get notes`);
+  res.json(parsedNotes)
 });
 
 app.post('/api/notes', (req, res) => {
@@ -40,7 +40,7 @@ app.post('/api/notes', (req, res) => {
       if (err) {
         console.error(err);
       } else {
-        const parsedNotes = JSON.parse(data);
+        parsedNotes = JSON.parse(data);
         parsedNotes.push(newNote);
 
         fs.writeFile(

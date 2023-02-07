@@ -1,37 +1,17 @@
 [
     {
-        "title": "advadv",
-        "text": "advadvadv",
-        "note_id": "3f4f"
+        "title": "Hair Cut Appointment",
+        "text": "Appointment at 3pm on Wednesday the 24th",
+        "id": "0372"
     },
     {
-        "title": "adcadc",
-        "text": "adcadcadc",
-        "note_id": "17c6"
+        "title": "Dinner Date",
+        "text": "Dinner at 7pm on Friday night",
+        "note_id": "0629"
     },
     {
-        "title": "adcad",
-        "text": "adcadcadc",
-        "note_id": "0cc5"
-    },
-    {
-        "title": "dafvadf",
-        "text": "adfadfadf",
-        "note_id": "8c07"
-    },
-    {
-        "title": "advadv",
-        "text": "advadv",
-        "note_id": "30a3"
-    },
-    {
-        "title": "wgwfgwfg",
-        "text": "wgwg",
-        "note_id": "29aa"
-    },
-    {
-        "title": "adfadf",
-        "text": "adfadfadf",
-        "note_id": "41f2"
+        "title": "Grocery List",
+        "text": "1) apples\n2) grapes\n3) eggs\n4) bread\n5) milk",
+        "note_id": "60b1"
     }
 ]
