@@ -7,16 +7,16 @@
     {
         "title": "Dinner Date",
         "text": "Dinner at 7pm on Friday night",
-        "note_id": "0629"
+        "id": "0629"
     },
     {
         "title": "Grocery List",
         "text": "1) apples\n2) grapes\n3) eggs\n4) bread\n5) milk",
-        "note_id": "60b1"
+        "id": "60b1"
     },
     {
-        "title": "Test",
-        "text": "Test",
-        "note_id": "6536"
+        "title": "Job Interview",
+        "text": "Tomorrow, 3pm. Dress Nice",
+        "id": "6536"
     }
 ]
